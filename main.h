@@ -30,6 +30,10 @@ struct fmt
 	int (*fn)(va_list, char[], int, int, int, int);
 };
 
+void putch (char *ptr)
+{
+    ssize_t bytes_written = write(STDOUT_FILENO, ptr, strlen(ptr));
+}
 
 /**
  * typedef struct fmt fmt_t - Struct op
